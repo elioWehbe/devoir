@@ -1,0 +1,23 @@
+<body>
+ <div class="container" id="app"></div>
+ <script type="text/babel">
+ var contenu_texte = "";
+ class EditeurText extends React.Component {
+ render() {
+ return (
+ <div className="row">
+ <div className="col-md-3"></div>
+ <div className="col-md-3" id="app">
+ <label htmlFor="texte">Entrez votre texte ici</label><br />
+ <textarea id="texte" className="texte" v-binding="contenu_texte">{contenu_texte}</textarea>
+ </div>
+ <div className="col-md-3"></div>
+ </div>
+ );
+ }
+ }
+ ReactDOM.render(
+ <EditeurText />,
+ document.getElementById('app')
+ );
+ </script>
